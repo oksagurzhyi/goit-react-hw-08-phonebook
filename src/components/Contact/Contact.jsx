@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 import { deleteContactFetch } from '../../store/operations';
 import PropTypes from 'prop-types';
 import css from './Contact.module.css';
@@ -19,13 +19,13 @@ export const Contact = ({ name, number, id }) => {
       >
         Delete
       </Button>
-      <Button
+      {/* <Button
         type="button"
         className={css.btnDelete}
         onClick={() => dispatch(deleteContactFetch(id))}
       >
         Edit
-      </Button>
+      </Button> */}
     </div>
   );
 };

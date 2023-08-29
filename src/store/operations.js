@@ -47,7 +47,7 @@ export const deleteContactFetch = createAsyncThunk(
   async (contactId, thunkAPI) => {
     try {
       const data = await axios.delete(`/contacts/${contactId}`);
-      setAuthHeader(data.config.headers.Authorization);
+      // setAuthHeader(data.config.headers.Authorization);
       console.log(data);
       return data;
     } catch (e) {
