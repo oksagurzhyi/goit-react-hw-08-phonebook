@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@chakra-ui/react';
-import { deleteContactFetch } from '../../store/operations';
+import { deleteContactFetch } from '../../redux/contacts/contactsOperations';
 import PropTypes from 'prop-types';
 import css from './Contact.module.css';
 import { useDispatch } from 'react-redux';
@@ -19,13 +19,6 @@ export const Contact = ({ name, number, id }) => {
       >
         Delete
       </Button>
-      {/* <Button
-        type="button"
-        className={css.btnDelete}
-        onClick={() => dispatch(deleteContactFetch(id))}
-      >
-        Edit
-      </Button> */}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { Button, Input } from '@chakra-ui/react';
-import { logInUser } from 'auth/operationsAuth';
+import { logInUser } from 'redux/auth/operationsAuth';
 import { useDispatch } from 'react-redux';
 
 const Login = () => {

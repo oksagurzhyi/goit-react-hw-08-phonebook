@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Input } from '@chakra-ui/react';
-import { filterChange } from 'store/filterSlice';
+import { filterChange } from 'redux/contacts/filterSlice';
 import css from './Filter.module.css';
 
 export const Filter = () => {

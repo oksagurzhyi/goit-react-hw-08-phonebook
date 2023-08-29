@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Input } from '@chakra-ui/react';
 import css from './ContactForm.module.css';
-import { contactsSelector } from 'store/selectors';
-import { addContactFetch } from 'store/operations';
+import { contactsSelector } from 'redux/contacts/selectors';
+import { addContactFetch } from 'redux/contacts/contactsOperations';
 
 export default function ContactForm() {
   const [name, setName] = useState('');

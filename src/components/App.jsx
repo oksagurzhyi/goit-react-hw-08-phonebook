@@ -2,7 +2,7 @@ import React, { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Box } from '@chakra-ui/react';
 import { useDispatch } from 'react-redux';
-import { getCurrentUser } from 'auth/operationsAuth';
+import { getCurrentUser } from 'redux/auth/operationsAuth';
 import Layout from './Layout/Layout';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import { PublicRoute } from './PublicRoute/PublicRoute';

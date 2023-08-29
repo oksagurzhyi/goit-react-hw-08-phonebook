@@ -5,7 +5,7 @@ import App from 'components/App';
 import './index.css';
 import { Provider } from 'react-redux';
 import { ChakraProvider } from '@chakra-ui/react';
-import { store, persistor } from 'store/store';
+import { store, persistor } from 'redux/store';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

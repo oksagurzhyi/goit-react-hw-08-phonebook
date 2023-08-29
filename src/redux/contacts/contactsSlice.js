@@ -3,7 +3,7 @@ import {
   fetchAllContacts,
   deleteContactFetch,
   addContactFetch,
-} from './operations';
+} from './contactsOperations';
 
 export const contactsSlice = createSlice({
   name: 'contacts',
@@ -12,10 +12,8 @@ export const contactsSlice = createSlice({
     isLoading: false,
     error: null,
   },
-  reducers: {},
   extraReducers: builder => {
     builder.addCase(fetchAllContacts.fulfilled, (state, action) => {
-      console.log(action.payload);
       return {
         ...state,
         contacts: action.payload,
@@ -36,10 +34,11 @@ export const contactsSlice = createSlice({
       };
     });
     builder.addCase(deleteContactFetch.fulfilled, (state, action) => {
+      console.log(action.payload);
       return {
         ...state,
         contacts: state.contacts.filter(
-          contact => contact.id !== action.payload.id
+          contact => contact.id !== action.payload
         ),
         isLoading: false,
       };

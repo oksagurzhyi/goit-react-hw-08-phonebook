@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import { selectIsLoggedIn, selectIsRefreshing } from 'auth/selectorsAuth';
+import { selectIsLoggedIn, selectIsRefreshing } from 'redux/auth/selectorsAuth';
 import { useSelector } from 'react-redux';
 import Navigation from 'components/Navigation/Navigation';
 import UserMenu from 'components/UserMenu/UserMenu';

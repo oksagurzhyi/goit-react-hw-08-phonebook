@@ -1,7 +1,7 @@
 import { Button } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectUser } from 'auth/selectorsAuth';
-import { logOutUser } from 'auth/operationsAuth';
+import { selectUser } from 'redux/auth/selectorsAuth';
+import { logOutUser } from 'redux/auth/operationsAuth';
 
 const UserMenu = () => {
   const dispatch = useDispatch();
