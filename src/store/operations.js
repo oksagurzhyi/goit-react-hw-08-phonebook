@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { deleteContact, addContact } from '../services/fetchContactsApi';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
@@ -8,9 +7,9 @@ const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
-const clearAuthHeader = () => {
-  axios.defaults.headers.common.Authorization = '';
-};
+// const clearAuthHeader = () => {
+//   axios.defaults.headers.common.Authorization = '';
+// };
 
 export const fetchAllContacts = createAsyncThunk(
   'contacts/fetchAllContacts',
