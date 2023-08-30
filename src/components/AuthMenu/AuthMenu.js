@@ -3,12 +3,7 @@ import { Button } from '@chakra-ui/react';
 
 const AuthMenu = () => {
   return (
-    <div
-    // style={{
-    //   display: 'flex',
-    //   gap: '20px',
-    // }}
-    >
+    <div>
       <Button colorScheme="blue" mr={5}>
         <NavLink to="/registration">Registration</NavLink>
       </Button>

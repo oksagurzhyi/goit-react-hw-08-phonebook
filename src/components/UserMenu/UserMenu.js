@@ -17,7 +17,7 @@ const UserMenu = () => {
 
         <Button
           type="button"
-          colorScheme="blue"
+          colorscheme="blue"
           w="full"
           ml={5}
           onClick={() => dispatch(logOutUser())}
