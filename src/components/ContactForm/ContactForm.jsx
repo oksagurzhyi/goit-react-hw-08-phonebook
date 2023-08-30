@@ -50,7 +50,6 @@ export default function ContactForm() {
       <label className={css.labelContact}>
         Name
         <Input
-          className={css.inputContact}
           type="text"
           name="name"
           value={name}
@@ -63,10 +62,10 @@ export default function ContactForm() {
       <label className={css.labelContact}>
         Number
         <InputMask
+          className={css.inputContact}
           mask="+38(099)999-99-99"
           maskChar="_"
           placeholder="+38(0__)___-__-__"
-          className={css.inputContact}
           type="tel"
           name="number"
           value={number}
@@ -75,7 +74,7 @@ export default function ContactForm() {
           required
         />
       </label>
-      <Button size="sm" type="submit" className={css.btnSubmit}>
+      <Button type="submit" colorScheme="blue" borderRadius="5px" w="100%">
         Add contact
       </Button>
     </form>

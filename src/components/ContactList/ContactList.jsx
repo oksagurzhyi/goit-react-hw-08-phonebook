@@ -1,19 +1,13 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import css from './ContactList.module.css';
 import { Contact } from 'components/Contact/Contact';
 import { contactsSelector, filterSelector } from 'redux/contacts/selectors';
-import { fetchAllContacts } from 'redux/contacts/contactsOperations';
 
 export const ContactList = () => {
   const contacts = useSelector(contactsSelector);
 
   const filter = useSelector(filterSelector);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchAllContacts());
-  }, [dispatch]);
 
   const totalNumberOfContacts = contacts.contacts.length;
 

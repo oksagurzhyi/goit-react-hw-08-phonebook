@@ -1,6 +1,5 @@
 import React, { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Box } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCurrentUser } from 'redux/auth/operationsAuth';
 import Layout from './Layout/Layout';
@@ -24,43 +23,33 @@ export default function App() {
 
   return (
     !isRefreshing && (
-      <Box>
-        <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<HomePage />} />
-              <Route
-                path="registration"
-                element={
-                  <PublicRoute
-                    component={<RegisterPage />}
-                    redirectTo="/contacts"
-                  />
-                }
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route
+            path="registration"
+            element={
+              <PublicRoute
+                component={<RegisterPage />}
+                redirectTo="/contacts"
               />
-              <Route
-                path="login"
-                element={
-                  <PublicRoute
-                    component={<LoginPage />}
-                    redirectTo="/contacts"
-                  />
-                }
-              />
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <PublicRoute component={<LoginPage />} redirectTo="/contacts" />
+            }
+          />
 
-              <Route
-                path="contacts"
-                element={
-                  <PrivateRoute
-                    component={<ContactPage />}
-                    redirectTo="/login"
-                  />
-                }
-              />
-            </Route>
-          </Routes>
-        </Box>
-      </Box>
+          <Route
+            path="contacts"
+            element={
+              <PrivateRoute component={<ContactPage />} redirectTo="/login" />
+            }
+          />
+        </Route>
+      </Routes>
     )
   );
 }

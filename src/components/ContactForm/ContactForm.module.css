@@ -15,9 +15,12 @@
   flex-direction: column;
   font-size: 15px;
 }
-
-.inputContact:focus {
-  border: blue solid 2px;
+.inputContact {
+  border-color: rgb(226, 232, 240);
+  width: 212px;
+  height: 38.4px;
+  padding: 0, 16px, 0, 16px;
+  border-radius: 6px;
 }
 
 .btnSubmit {
