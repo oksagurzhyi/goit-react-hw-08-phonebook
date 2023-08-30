@@ -8,19 +8,11 @@ const Home = () => {
   return (
     <>
       <Flex bg="gray.100" justify="center" h="100vh" alignItems="flex-start">
-        {isLoggedIn ? (
-          <Link to="/contacts">
-            <Box bg="white" p={10} m={10} rounded="md">
-              Create new contact.
-            </Box>
-          </Link>
-        ) : (
-          <Link to="/registration">
-            <Box bg="white" p={10} m={10} rounded="md">
-              Create new contact.
-            </Box>
-          </Link>
-        )}
+        <Link to={isLoggedIn ? '/contacts' : '/registration'}>
+          <Box bg="white" p={10} m={10} rounded="md">
+            Create new contact.
+          </Box>
+        </Link>
       </Flex>
     </>
   );
