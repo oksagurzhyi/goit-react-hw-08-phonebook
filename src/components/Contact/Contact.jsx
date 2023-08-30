@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from '@chakra-ui/react';
 import { deleteContactFetch } from '../../redux/contacts/contactsOperations';
 import PropTypes from 'prop-types';
-import css from './Contact.module.css';
 import { useDispatch } from 'react-redux';
 
 export const Contact = ({ name, number, id }) => {

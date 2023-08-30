@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Box, Button, Input } from '@chakra-ui/react';
+import { Button, Input } from '@chakra-ui/react';
 import InputMask from 'react-input-mask';
 import css from './ContactForm.module.css';
 import { contactsSelector } from 'redux/contacts/selectors';

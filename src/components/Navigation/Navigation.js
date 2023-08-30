@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn, selectIsRefreshing } from 'redux/auth/selectorsAuth';
+import { selectIsLoggedIn } from 'redux/auth/selectorsAuth';
 import UserMenu from 'components/UserMenu/UserMenu';
 import AuthMenu from 'components/AuthMenu/AuthMenu';
 import { Button, Box, Flex, Container } from '@chakra-ui/react';
