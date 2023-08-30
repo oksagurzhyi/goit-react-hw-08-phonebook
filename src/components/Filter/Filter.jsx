@@ -9,8 +9,9 @@ export const Filter = () => {
 
   return (
     <label className={css.labelFilter}>
-      Find contacts by name:
+      Find contact by name:
       <Input
+        size="md"
         className={css.inputFilter}
         type="text"
         onChange={e => {

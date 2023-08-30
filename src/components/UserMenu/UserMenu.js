@@ -9,9 +9,24 @@ const UserMenu = () => {
   const user = useSelector(selectUser);
 
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+      }}
+    >
       <p>Hello, {user.email}</p>
-      <Button onClick={() => dispatch(logOutUser())}>LogOut</Button>
+      <Button
+        size="xs"
+        onClick={() => dispatch(logOutUser())}
+        style={{
+          marginLeft: '10px',
+        }}
+      >
+        LogOut
+      </Button>
     </div>
   );
 };

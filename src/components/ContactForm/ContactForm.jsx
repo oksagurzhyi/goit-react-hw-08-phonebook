@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Input } from '@chakra-ui/react';
+import { Box, Button, Input } from '@chakra-ui/react';
+import InputMask from 'react-input-mask';
 import css from './ContactForm.module.css';
 import { contactsSelector } from 'redux/contacts/selectors';
 import { addContactFetch } from 'redux/contacts/contactsOperations';
@@ -61,18 +62,20 @@ export default function ContactForm() {
       </label>
       <label className={css.labelContact}>
         Number
-        <Input
+        <InputMask
+          mask="+38(099)999-99-99"
+          maskChar="_"
+          placeholder="+38(0__)___-__-__"
           className={css.inputContact}
           type="tel"
           name="number"
           value={number}
           onChange={handleChange}
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
       </label>
-      <Button type="submit" className={css.btnSubmit}>
+      <Button size="sm" type="submit" className={css.btnSubmit}>
         Add contact
       </Button>
     </form>

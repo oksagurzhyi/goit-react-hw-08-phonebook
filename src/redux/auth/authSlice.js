@@ -41,13 +41,16 @@ export const authSlice = createSlice({
       return state;
     });
     builder.addCase(getCurrentUser.fulfilled, (state, action) => {
-      state.user = action.payload;
-      state.isLoggedIn = true;
       state.isRefreshing = false;
+      state.isLoggedIn = true;
+      state.user = action.payload;
+      console.log(action.payload);
+
       return state;
     });
     builder.addCase(getCurrentUser.rejected, state => {
       state.isRefreshing = false;
+
       return state;
     });
   },

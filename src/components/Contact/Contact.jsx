@@ -8,13 +8,23 @@ import { useDispatch } from 'react-redux';
 export const Contact = ({ name, number, id }) => {
   const dispatch = useDispatch();
   return (
-    <div>
-      <p>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+      }}
+    >
+      <p
+        style={{
+          fontSize: '15px',
+        }}
+      >
         {name}: {number}
       </p>
       <Button
+        size="xs"
         type="button"
-        className={css.btnDelete}
         onClick={() => dispatch(deleteContactFetch(id))}
       >
         Delete
